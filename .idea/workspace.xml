@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c034033f-2cce-4909-bf63-e84dcfbe5e0f" name="Default Changelist" comment="refactor: readme" />
+    <list default="true" id="84e302b8-5ab4-4ba0-a04b-5c2cda6482d0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CrawlController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CrawlController.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -123,7 +126,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/finder" />
     </include_path>
   </component>
-  <component name="ProjectId" id="1v2rKHKNe3zqP64Y4RGGoNy78Sm" />
+  <component name="ProjectId" id="1vBLxAwruAL2tVfK3XxlwbXDdZK" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -133,15 +136,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../basalam-entry-test" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MTHome" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\projects\IR-project\app" />
-      <recent name="C:\xampp\htdocs\projects\IR-project" />
-    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -152,65 +149,16 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c034033f-2cce-4909-bf63-e84dcfbe5e0f" name="Default Changelist" comment="" />
-      <created>1625770966191</created>
+      <changelist id="84e302b8-5ab4-4ba0-a04b-5c2cda6482d0" name="Default Changelist" comment="" />
+      <created>1626030782850</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1625770966191</updated>
-      <workItem from="1625770970618" duration="8145000" />
-      <workItem from="1625950895309" duration="3372000" />
-      <workItem from="1626027518874" duration="632000" />
+      <updated>1626030782850</updated>
+      <workItem from="1626030786912" duration="3926000" />
     </task>
-    <task id="LOCAL-00001" summary="feat: crawl a single page in quera magnet">
-      <created>1625953763944</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1625953763944</updated>
-    </task>
-    <task id="LOCAL-00002" summary="refactor: gitignore">
-      <created>1625953969584</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1625953969584</updated>
-    </task>
-    <task id="LOCAL-00003" summary="refactor: gitignore">
-      <created>1625954033362</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1625954033362</updated>
-    </task>
-    <task id="LOCAL-00004" summary="refactor: readme">
-      <created>1625954272265</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1625954272265</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="feat: crawl a single page in quera magnet" />
-    <MESSAGE value="refactor: gitignore" />
-    <MESSAGE value="refactor: readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: readme" />
   </component>
 </project>

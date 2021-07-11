@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Page;
 use Goutte\Client;
 use Illuminate\Http\Request;
 use App\Infrastructure\Enums\SelectorEnum;
@@ -11,21 +12,43 @@ class CrawlController extends Controller
     const PAGES_COUNT = 33;
 
     private $client;
-    private $url = "https://quera.ir/careers/jobs?page=1";
+    private $url = "https://quera.ir/careers/jobs?page=:number";
 
 
     public function crawlPage(Request $request)
     {
         $this->client = new Client();
-        $crawler = $this->client->request('GET', $this->url);
 
-        $titles = $this->getData(SelectorEnum::TITLE_SELECTOR, $crawler);
-        $companies = $this->getData(SelectorEnum::COMPANY_SELECTOR, $crawler);
-        $levels = $this->getData(SelectorEnum::LEVEL_SELECTOR, $crawler);
-        $contractTypes = $this->getData(SelectorEnum::CONTRACT_TYPE_SELECTOR, $crawler);
-        $links = $this->getLinks(SelectorEnum::LINK_SELECTOR, $crawler);
-        $descriptions = $this->getDescriptions($links);
+        for ($j = 1; $j <= self::PAGES_COUNT; $j++) {
 
+            $crawler = $this->client->request('GET', __($this->url, ['number' => $j]));
+
+            $titles = $this->getData(SelectorEnum::TITLE_SELECTOR, $crawler);
+            $companies = $this->getData(SelectorEnum::COMPANY_SELECTOR, $crawler);
+            $levels = $this->getData(SelectorEnum::LEVEL_SELECTOR, $crawler);
+            $contractTypes = $this->getData(SelectorEnum::CONTRACT_TYPE_SELECTOR, $crawler);
+            $links = $this->getLinks(SelectorEnum::LINK_SELECTOR, $crawler);
+            $descriptions = $this->getDescriptions($links);
+
+
+            for ($i = 0; $i <= 13; $i++) {
+
+                $record = new Page();
+                $record->{Page::TITLE} = $titles[$i] ?? null;
+                $record->{Page::COMPANY} = $companies[$i] ?? null;
+                $record->{Page::LEVEL} = $levels[$i] ?? null;
+                $record->{Page::CONTRACT_TYPE} = $contractTypes[$i] ?? null;
+                $record->{Page::LINK} = $links[$i] ?? null;
+                $record->{Page::DESCRIPTION} = $descriptions[$i] ?? null;
+
+                $record->saveOrFail();
+            }
+
+            echo "page $j has been crawled.<br>";
+        }
+
+
+        echo "all data has been crawled successfully.<br>";
     }
 
     private function getData($selector, $crawler): array
