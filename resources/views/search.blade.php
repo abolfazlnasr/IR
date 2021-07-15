@@ -25,15 +25,13 @@
     <div class="container px-4 text-center">
         <form action="{{ route('search') }}" method="get">
             <div class="row justify-content-center">
-                <div class="form-group col-12">
-                    <label for="query"></label>
-                    <input id="query" name="query" type="text" class="form-control font-farsi"
-                           placeholder="عبارت مد نظر خود را وارد کنید" style="text-align: right">
-                </div>
-                <div class="form-group col-12" style="margin-top: 10px">
-                    <label for="submit"></label>
-                    <input id="submit" name="submit" value="Search" type="submit" class="btn-group-lg font-farsi"
+                <div class="col-1">
+                    <input id="submit" name="submit" value="Search" type="submit" class="btn-group-lg text-center font-farsi w-100 h-100"
                            style="text-align: right">
+                </div>
+                <div class="col-11">
+                    <input id="query" name="query" type="text" class="form-control font-farsi h-100"
+                           placeholder="عبارت مد نظر خود را وارد کنید" style="text-align: right">
                 </div>
             </div>
         </form>
@@ -45,18 +43,20 @@
         <div class="row gx-4 justify-content-center">
             <div class="col-lg-8">
                 <ul class="list-group">
-{{--                    @if(isset($results))--}}
-{{--                        @foreach($results as $result)--}}
-                            <li class="list-group-item">
-                                <a href="" style="float: right; display: inline-block; margin-left: 5pt;">استخدام پایتون کار </a>
-                                <p class="result" style="float: right; display: inline-block; margin-left: 5pt;">فراگستران </p>
-                                <p class="result" style="float: right; display: inline-block; margin-left: 5pt;">تمام وقت </p>
-                                <p class="result" style="float: right; display: inline-block; margin-left: 5pt;">سنیور </p>
-                                <p class="result" style="float: right; display: inline-block; margin-left: 5pt;">سنیور </p>
-                                <p class="result" style="float: right; display: inline-block; margin-left: 5pt;">وظیفه ی ئایتون کار این است که پایتون بنویسد و لا غیر </p>
+                    @if(isset($results))
+                        @foreach($results as $result)
+                            <li class="list-group-item mb-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <p class="result mb-0" style="float: right; display: inline-block;">{{ $result['_source']['level'] }}</p>
+                                    <p class="result mb-0" style="float: right; display: inline-block; margin-left: 10pt;">{{ $result['_source']['company'] }}</p>
+                                    <p class="result mb-0" style="display: inline-block; margin-right: auto; margin-left: 10px;">{{ $result['_source']['contract_type'] }}</p>
+                                    <a href="" style="display: inline-block">{{ $result['_source']['title'] }}</a>
+                                </div>
+                                <p class="result mb-0 mt-3"
+                                   style="display: inline-block; margin-left: 5pt; width: 50rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; direction: rtl; text-align: right;">{{ $result['_source']['description'] }}</p>
                             </li>
-{{--                        @endforeach--}}
-{{--                    @endif--}}
+                        @endforeach
+                    @endif
                 </ul>
             </div>
         </div>

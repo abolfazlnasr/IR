@@ -33,7 +33,7 @@ class SearchController extends Controller
 
         $results = $client->search($params);
 
-        return view('search', ['results' => $results]);
+        return view('search', ['results' => $results['hits']['hits']]);
     }
 
     public function insertIntoElastic(Request $request): void
