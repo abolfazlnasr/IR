@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestController;
 use App\Http\Controllers\CrawlController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,10 @@ use App\Http\Controllers\CrawlController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('search');
 });
 
 Route::get('/crawl', [CrawlController::class, 'crawlPage']);
+Route::get('/search', [SearchController::class, 'search'])->name('search');
+Route::get('/search/insertIntoElastic', [SearchController::class, 'insertIntoElastic']);
+Route::get('/test', [TestController::class, 'test']);

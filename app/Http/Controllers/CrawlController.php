@@ -33,6 +33,10 @@ class CrawlController extends Controller
 
             for ($i = 0; $i <= 13; $i++) {
 
+                if (!isset($titles[$i])) {
+                    continue;
+                }
+
                 $record = new Page();
                 $record->{Page::TITLE} = $titles[$i] ?? null;
                 $record->{Page::COMPANY} = $companies[$i] ?? null;
