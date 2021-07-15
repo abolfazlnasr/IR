@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="84e302b8-5ab4-4ba0-a04b-5c2cda6482d0" name="Default Changelist" comment="feat: crawl whole data">
-      <change beforePath="$PROJECT_DIR$/.idea/IR-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IR-project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CrawlController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CrawlController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="84e302b8-5ab4-4ba0-a04b-5c2cda6482d0" name="Default Changelist" comment="almost finished" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -174,7 +166,7 @@
       <option name="presentableId" value="Default" />
       <updated>1626030782850</updated>
       <workItem from="1626030786912" duration="4151000" />
-      <workItem from="1626289633296" duration="22018000" />
+      <workItem from="1626289633296" duration="22339000" />
     </task>
     <task id="LOCAL-00001" summary="feat: crawl whole data">
       <created>1626036058819</created>
@@ -183,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626036058819</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="almost finished">
+      <created>1626322544190</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1626322544190</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +202,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: crawl whole data" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: crawl whole data" />
+    <MESSAGE value="almost finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="almost finished" />
   </component>
   <component name="regexState">
     <option name="map">
